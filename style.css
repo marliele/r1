@@ -1,0 +1,160 @@
+@font-face { font-family: Inter; src: url('fonts/Inter.ttc'); } 
+@font-face { font-family: ImpactDOWNLOADED; src: url('fonts/Impact.ttf'); } 
+
+body {
+    display: grid;
+    margin: 0;
+    grid-template-areas: "H" "M" "F";
+}
+
+header {
+    grid-area: H;
+    background-color: rgb(27,84,221);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+.h_1 {
+    font-weight: 100;
+    font-family: Impact;
+    font-size: 31.58px;
+}
+.h_2 {
+    font-family: Inter;
+    font-size: 36px;
+}
+.img_1 {
+    align-items: center;
+    height: auto;
+    object-fit: cover;
+}
+.a_1 {
+    font-family: Inter;
+    font-size: 24px;
+}
+.a_2 {
+    font-family: Inter;
+    font-size: 14px;
+}
+.CTA_Text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    width: 110px;
+    height: 42px;
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+main {
+    background-color: white;
+    grid-area: M;
+    display: flex;
+    text-align: center;
+    color: black;
+    font-family: Inter;
+}
+figure {
+    display: flex;
+}
+figure img {
+    align-items: center;
+    height: auto;
+    object-fit: cover;
+}
+figure figcaption * {
+    margin-bottom: 16px;
+    text-align: left;
+}
+figure figcaption h2 {
+    font-size: 24px;
+}
+figure figcaption article {
+    font-size: 14px;
+}
+.figcaption_a {
+    font-size: 14px;
+    color:rgb(27,84,221);
+}
+.CTA_Text_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(27, 84, 221);
+    color: white;
+    width: 110px;
+    height: 42px;
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+footer {
+    background-color: rgb(232,232,232);
+    grid-area: F;
+    text-align: center;
+}
+footer nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+footer nav img {
+    margin-left:32px;
+    margin-top: 28px;
+    height: 19px;
+    width: 21px;
+}
+footer aside {
+    font-family: Inter;
+    font-size: 14px;
+    margin-top: 16px;
+}
+footer span img {
+    margin-top:16px;
+    margin-bottom: 26px;
+}
+@media screen and (max-width: 768px) {
+    .h_1 {
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    .h_2, .img_1, .a_1, .a_2 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    header *, main {
+        margin-top: 32px;
+    }
+    main {
+        flex-direction: column;
+    }
+    figure {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .h_1 {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    .h_2, .img_1, .a_1, .a_2 {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    header *, main {
+        margin-top: 32px;
+    }
+    main {
+        flex-direction: column;
+    }
+    figure figcaption * {
+        margin-bottom: 16px;
+        margin-left: 32px;
+    }
+}
