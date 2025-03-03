@@ -13,4 +13,4 @@ async function loadData() {
     return allData;
 }
 
-module.exports = loadData;
+module.exports = { loadData };
