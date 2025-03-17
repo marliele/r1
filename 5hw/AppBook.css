@@ -1,0 +1,49 @@
+.BookContainer {
+    display: flex;
+    flex-Wrap: wrap;
+    justify-Content:center;
+    padding: 20px;
+    background-Color: #f9f9f9;
+}
+.App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .SearchAndSort {
+    margin-bottom: 20px;
+  }
+  
+  .SearchAndSort input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+  }
+  
+  .SortControls {
+    display: inline-block;
+  }
+  
+  .SortControls label {
+    margin-right: 10px;
+  }
+  
+  .BookContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .image {
+    width: 150px;
+    height: auto;
+  }
