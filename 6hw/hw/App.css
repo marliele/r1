@@ -1,0 +1,127 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, sans-serif;
+}
+
+.app, .background-changer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.app.day {
+  background-color: #87CEEB;
+  color: black;
+}
+
+.app.night {
+  background-color: #1E1E1E;
+  color: white;
+}
+
+.daily-forecast {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.daily-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.daily-item:last-child {
+  border-bottom: none;
+}
+
+.daily-item img {
+  width: 30px;
+  height: 30px;
+}
+
+.weather-forecast {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hourly-forecast {
+  display: flex;
+  gap: 20px;
+}
+
+.city-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.city-selector input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.city-selector button {
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.city-selector button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.current-weather {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.temperature {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.additional-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.info-item {
+  font-size: 14px;
+  padding-left: 7px;
+}
