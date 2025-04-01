@@ -1,0 +1,36 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.header h3 {
+  margin: 0;
+}
+
+.header button {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.content {
+  padding: 15px;
+}
