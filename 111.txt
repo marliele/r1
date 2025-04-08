@@ -1,0 +1,102 @@
+import React, { useState } from 'react';
+
+const TreeComponent = ({ node }) => {
+  // Состояние для хранения состояния раскрытия узла
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Обработчик клика для изменения состояния раскрытия
+  const toggleNode = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Проверка, является ли узел листовым
+  const isLeafNode = node.children === null || node.children === undefined;
+
+  return (
+    <div>
+      {/* Заголовок узла */}
+      <div className="node-header" onClick={toggleNode}>
+        {/* Иконка для показа состояния раскрытия */}
+        {isLeafNode ? '' : isOpen ? '-' : '+'}
+        {/* Заголовок узла */}
+        {node.header}
+      </div>
+
+      {/* Если узел раскрыт и содержит дочерние элементы */}
+      {!isLeafNode && isOpen && (
+        <ul className="children">
+          {node.children.map((child, index) => (
+            <li key={index}>
+              <TreeComponent node={child} />
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+export default TreeComponent;
+
+import React from 'react';
+import TreeComponent from './TreeComponent';
+
+// Исходная древовидная структура
+const treeData = {
+  header: 'Root',
+  children: [
+    {
+      header: 'Child 1',
+      children: [
+        {
+          header: 'Grandchild 1.1',
+        },
+        {
+          header: 'Grandchild 1.2',
+        },
+      ],
+    },
+    {
+      header: 'Child 2',
+    },
+    {
+      header: 'Child 3',
+      children: [
+        {
+          header: 'Grandchild 3.1',
+        },
+      ],
+    },
+  ],
+};
+
+const App = () => {
+  return (
+    <div className="app">
+      <h1>Древовидная структура</h1>
+      <TreeComponent node={treeData} />
+    </div>
+  );
+};
+
+export default App;
+
+/* Стили для всего приложения */
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Стили для заголовка узла */
+.node-header {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+/* Стили для дочерних элементов */
+.children {
+  padding-left: 20px; /* Отступ для создания эффекта вложенности */
+}
