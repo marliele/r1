@@ -1,0 +1,76 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+.thead, .left-cell-head {
+    padding: 8px;
+    border: 1px solid #686868;
+    text-align: left;
+    background-color: #6791c0;
+}
+
+.left-cell {
+    background-color: #6790c0a2;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #686868;
+    text-align: left;
+}
+  
+td.left-cell {
+    width: 50px;
+    border: 1px solid #686868;
+    text-align: center;
+ }
+  
+tr.selected-row {
+    background-color: #e0f7fa;
+}
+
+td.left-cell.selected {
+    background-color: #63b3ed;
+}
+
+button {
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: #6791c0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+  
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+form {
+    margin-bottom: 20px;
+  }
+  
+  form div {
+    display: flex;
+    gap: 10px;
+  }
+  
+  form input, form textarea {
+    padding: 8px;
+    box-sizing: border-box;
+    flex: 1;
+  }
+  
+  form button {
+    padding: 8px 16px;
+    background-color: #6791c0;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #4a76a8;
+  }
